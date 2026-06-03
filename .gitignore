@@ -2,3 +2,7 @@
 Thumbs.db
 .DS_Store
 desktop.ini
+
+# Pastas de outros projetos (área de membros tem repositório próprio)
+area-de-membros/
+bonus/

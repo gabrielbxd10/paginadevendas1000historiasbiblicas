@@ -232,6 +232,41 @@
   }
   .save-flag{display:inline-block;background:#eafbe7;color:var(--green);font-weight:800;font-size:.8rem;padding:4px 12px;border-radius:30px;margin-bottom:10px}
 
+  /* ---------- Dead / sold-out plan ---------- */
+  .plan--dead{filter:grayscale(.9);opacity:.62;position:relative}
+  .plan--dead h3,.plan--dead .price,.plan--dead .price small{color:#7c8196}
+  .plan--dead .price{text-decoration:line-through;text-decoration-color:#b9416b}
+  .plan--dead li{color:#9298ad}
+  .plan--dead li svg{color:#a9aebf}
+  .dead-stamp{
+    display:none;
+    position:absolute;top:18px;right:-6px;background:#9298ad;color:#fff;
+    font-weight:900;font-size:.74rem;letter-spacing:1.5px;text-transform:uppercase;
+    padding:7px 16px;border-radius:6px;transform:rotate(6deg);box-shadow:0 6px 14px rgba(0,0,0,.18);
+  }
+  .plan--dead .dead-stamp{display:block}
+  .btn--dead{background:#d9dbe4 !important;color:#6a7088 !important;box-shadow:none !important;cursor:pointer}
+  .btn--dead:hover{transform:none}
+
+  /* ---------- Offer modal ---------- */
+  .modal-ov{position:fixed;inset:0;z-index:200;background:rgba(20,29,59,.62);backdrop-filter:blur(4px);
+    display:none;align-items:center;justify-content:center;padding:20px}
+  .modal-ov.open{display:flex}
+  .modal{background:#fff;border-radius:24px;max-width:440px;width:100%;padding:38px 32px 32px;text-align:center;
+    box-shadow:var(--shadow-lg);position:relative;animation:pop .3s ease}
+  @keyframes pop{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
+  .modal .x{position:absolute;top:14px;right:16px;border:none;background:none;font-size:1.6rem;color:#b3b8c8;cursor:pointer;line-height:1}
+  .modal .em{font-size:2.6rem;margin-bottom:8px}
+  .modal h3{font-size:1.5rem;color:var(--indigo);font-weight:800;margin-bottom:10px}
+  .modal p{color:var(--ink-soft);font-size:1rem;margin-bottom:8px}
+  .modal .hl{background:linear-gradient(180deg,#fffdf7,#fff);border:1.5px solid var(--gold);border-radius:16px;padding:16px;margin:18px 0}
+  .modal .hl .small{font-size:.85rem;font-weight:700;color:var(--gold-deep);text-transform:uppercase;letter-spacing:1px}
+  .modal .hl .big{font-family:'Fraunces',serif;font-weight:900;font-size:2.4rem;color:var(--indigo);line-height:1}
+  .modal .hl .big small{font-size:1rem}
+  .modal .hl s{color:#b3b8c8;font-weight:700;font-size:1rem}
+  .modal .btn{width:100%;margin-top:4px}
+  .modal .skip{display:block;margin-top:14px;font-size:.85rem;color:#9298ad;font-weight:700;background:none;border:none;cursor:pointer;width:100%}
+
   /* ---------- Guarantee ---------- */
   .guar-card{
     background:#fff;border:1px solid var(--line);border-radius:28px;max-width:880px;margin:0 auto;
@@ -432,7 +467,7 @@
   <div class="wrap">
     <div class="head reveal">
       <span class="eyebrow">Presentes exclusivos</span>
-      <h2>No Pacote Completo, você ainda leva 4 bônus especiais</h2>
+      <h2>No Pacote Completo, você ainda leva 11 bônus especiais</h2>
       <p>Materiais extras que aprofundam a fé da criança e tornam cada dia uma nova oportunidade de ensinar.</p>
     </div>
     <div class="bonus-grid">
@@ -451,6 +486,34 @@
       <div class="bonus reveal">
         <div class="bnum">4</div>
         <div><span class="tag">Bônus 04</span><h3>Potinho da Fé</h3><p>Cartõezinhos com mensagens, desafios e frases de fé para colocar em um potinho e sortear todos os dias.</p></div>
+      </div>
+      <div class="bonus reveal">
+        <div class="bnum">5</div>
+        <div><span class="tag">Bônus 05</span><h3>Jogos Bíblicos</h3><p>Caça-palavras, labirintos, ligue os pontos, jogo dos 7 erros e muito mais — diversão que ensina a Palavra brincando.</p></div>
+      </div>
+      <div class="bonus reveal">
+        <div class="bnum">6</div>
+        <div><span class="tag">Bônus 06</span><h3>360 Orações Infantis Coloridas</h3><p>Uma oração ilustrada e colorida para cada dia do ano, criando o hábito de conversar com Deus desde cedo.</p></div>
+      </div>
+      <div class="bonus reveal">
+        <div class="bnum">7</div>
+        <div><span class="tag">Bônus 07</span><h3>100 Versículos para Memorizar</h3><p>100 cartões ilustrados de corte, organizados por 10 temas, para guardar a Palavra de Deus no coração da criança.</p></div>
+      </div>
+      <div class="bonus reveal">
+        <div class="bnum">8</div>
+        <div><span class="tag">Bônus 08</span><h3>Plano de Leitura em 30 Dias</h3><p>Uma jornada guiada pela Bíblia, dia após dia, com versículo, pergunta para conversar, oração e diário de gratidão.</p></div>
+      </div>
+      <div class="bonus reveal">
+        <div class="bnum">9</div>
+        <div><span class="tag">Bônus 09</span><h3>Livro de Colorir Bíblico</h3><p>21 desenhos encantadores das histórias e símbolos da Bíblia para a criança pintar, aprender e se divertir.</p></div>
+      </div>
+      <div class="bonus reveal">
+        <div class="bnum">10</div>
+        <div><span class="tag">Bônus 10</span><h3>Quadro de Recompensas da Fé</h3><p>Quadros, metas, cupons e medalhas para transformar virtudes cristãs em hábitos diários de forma divertida.</p></div>
+      </div>
+      <div class="bonus reveal">
+        <div class="bnum">11</div>
+        <div><span class="tag">Bônus 11</span><h3>Certificado "Pequeno Herói da Fé"</h3><p>Um certificado personalizável com o nome da criança — um reconhecimento que enche o coração de orgulho e fé.</p></div>
       </div>
     </div>
   </div>
@@ -481,32 +544,40 @@
       <p>Pagamento único, acesso vitalício e sem mensalidade. Comece hoje a plantar a fé.</p>
     </div>
     <div class="plans">
-      <div class="plan reveal">
-        <h3>Pacote Essencial</h3>
-        <p class="tagline">Comece sua jornada</p>
-        <div class="price"><small>R$</small>10<small>,00</small></div>
+      <div class="plan reveal" id="basicPlan">
+        <span class="dead-stamp">Esgotado</span>
+        <h3>Pacote Básico</h3>
+        <p class="tagline">Experimente o material</p>
+        <div class="price"><small>R$</small>1<small>,99</small></div>
         <p class="price-note">pagamento único · acesso imediato</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>1000 histórias bíblicas infantis</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>PDF completo e ilustrado</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Acesso imediato</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>100 histórias bíblicas infantis</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>PDF ilustrado para começar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Acesso imediato por 1 semana</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Garantia de 7 dias</li>
         </ul>
-        <a href="https://ggcheckout.app/checkout/v5/Agm3vCLzFvW912VQJkRa" class="btn" style="background:linear-gradient(180deg,#eef1fb,#dde3f5);color:var(--indigo);box-shadow:var(--shadow-sm)">Quero o Pacote Essencial</a>
+        <button type="button" class="btn" id="basicBtn" style="background:linear-gradient(180deg,#eef1fb,#dde3f5);color:var(--indigo);box-shadow:var(--shadow-sm)">Quero o Pacote Básico</button>
       </div>
       <div class="plan plan--featured reveal">
         <span class="ribbon">⭐ Mais escolhido</span>
         <span class="save-flag">Melhor custo-benefício</span>
         <h3>Pacote Completo</h3>
-        <p class="tagline">Tudo do Essencial + 4 bônus exclusivos</p>
-        <div class="price"><small>R$</small>19<small>,90</small></div>
-        <p class="price-note">pagamento único · menos de R$0,02 por história</p>
+        <p class="tagline">Todo o material + 11 bônus exclusivos</p>
+        <div class="price"><small>R$</small>10<small>,00</small></div>
+        <p class="price-note">pagamento único · acesso vitalício · menos de R$0,01 por história</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>1000 histórias bíblicas infantis</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>1000 histórias bíblicas infantis (acesso vitalício)</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg><b>Bônus:</b>&nbsp;Mapa Mental dos 10 Mandamentos</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg><b>Bônus:</b>&nbsp;Devocional Infantil</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg><b>Bônus:</b>&nbsp;Salmos e Versículos para Crianças</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg><b>Bônus:</b>&nbsp;Potinho da Fé</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg><b>Bônus:</b>&nbsp;Jogos Bíblicos</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg><b>Bônus:</b>&nbsp;360 Orações Infantis Coloridas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg><b>Bônus:</b>&nbsp;100 Versículos para Memorizar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg><b>Bônus:</b>&nbsp;Plano de Leitura em 30 Dias</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg><b>Bônus:</b>&nbsp;Livro de Colorir Bíblico</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg><b>Bônus:</b>&nbsp;Quadro de Recompensas da Fé</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg><b>Bônus:</b>&nbsp;Certificado "Pequeno Herói da Fé"</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Acesso imediato + Garantia de 7 dias</li>
         </ul>
         <a href="https://ggcheckout.app/checkout/v5/4LsDhbT3DXa1YBNYsdbP" class="btn btn--pulse">Quero o Pacote Completo</a>
@@ -586,7 +657,41 @@
   <p style="opacity:.7">Este material é destinado ao uso educativo e familiar.</p>
 </footer>
 
+<!-- ===== POP-UP OFERTA ===== -->
+<div class="modal-ov" id="offerModal">
+  <div class="modal">
+    <button class="x" id="offerClose" aria-label="Fechar">&times;</button>
+    <div class="em">⏰</div>
+    <h3>O Pacote Básico se encerrou!</h3>
+    <p>Mas temos uma surpresa especial para você não ficar de fora...</p>
+    <div class="hl">
+      <div class="small">Oferta Completa por apenas</div>
+      <div class="big">R$5</div>
+      <div><s>De R$10</s> &middot; 1000 histórias + todos os 11 bônus</div>
+    </div>
+    <a href="https://ggcheckout.app/checkout/v5/Agm3vCLzFvW912VQJkRa" class="btn btn--pulse">Quero a Oferta Completa por R$5</a>
+    <button class="skip" id="offerSkip">Não, prefiro perder essa oferta</button>
+  </div>
+</div>
+
 <script>
+  // Pop-up oferta (Pacote Básico encerrado)
+  (function(){
+    var ov=document.getElementById('offerModal');
+    var btn=document.getElementById('basicBtn');
+    var plan=document.getElementById('basicPlan');
+    function open(){
+      if(plan) plan.classList.add('plan--dead');   // revela "Esgotado" só ao clicar
+      ov.classList.add('open');document.body.style.overflow='hidden';
+    }
+    function close(){ov.classList.remove('open');document.body.style.overflow='';}
+    if(btn) btn.addEventListener('click',open);
+    document.getElementById('offerClose').addEventListener('click',close);
+    document.getElementById('offerSkip').addEventListener('click',close);
+    ov.addEventListener('click',function(e){if(e.target===ov)close();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+  })();
+
   // FAQ accordion
   document.querySelectorAll('.faq-q').forEach(function(q){
     q.addEventListener('click',function(){
