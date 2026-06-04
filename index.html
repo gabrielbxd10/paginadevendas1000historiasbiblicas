@@ -130,6 +130,16 @@
   /* slim "para quem" band */
   .who-band{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px;max-width:880px;margin:22px auto 0}
   .who-band span{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:50px;padding:10px 18px;font-weight:700;color:var(--indigo);box-shadow:var(--shadow-sm);font-size:.95rem}
+  /* compact "o que vem dentro" */
+  .inc-card{max-width:880px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:32px 38px}
+  .inc-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:15px 30px}
+  .inc-list li{display:flex;gap:11px;align-items:flex-start;font-size:1.03rem;color:var(--ink-soft);font-weight:600}
+  .inc-list li b{color:var(--indigo)}
+  .inc-list .ck{flex:none;width:24px;height:24px;border-radius:50%;background:var(--gold);display:grid;place-items:center;color:#3a2a08;margin-top:1px}
+  .inc-list .ck svg{width:13px;height:13px}
+  /* compact chips (temas) */
+  .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:9px 10px;max-width:920px;margin:0 auto}
+  .chips span{background:#fff;border:1px solid var(--line);border-radius:50px;padding:8px 15px;font-weight:700;color:var(--indigo);font-size:.9rem;box-shadow:var(--shadow-sm)}
   .hero-image img{
     width:100%;max-width:760px;margin:0 auto;border-radius:24px;
     box-shadow:var(--shadow-lg);border:1px solid var(--line);
@@ -342,6 +352,8 @@
     .who-grid{grid-template-columns:1fr}
     .feature-list{grid-template-columns:1fr}
     .themes-grid{grid-template-columns:repeat(2,1fr)}
+    .inc-list{grid-template-columns:1fr}
+    .inc-card{padding:26px 22px}
     .gallery{grid-template-columns:1fr}
     .bonus{flex-direction:column;gap:14px}
     .btn{font-size:1rem;padding:18px 26px;width:100%}
@@ -389,24 +401,22 @@
   </div>
 </section>
 
-<!-- ===== O QUE VOCÊ VAI RECEBER ===== -->
+<!-- ===== O QUE VOCÊ VAI RECEBER (enxuto) ===== -->
 <section class="pad">
   <div class="wrap">
-    <div class="head reveal">
+    <div class="head reveal" style="margin-bottom:30px">
       <span class="eyebrow">Tudo incluso</span>
-      <h2>O que vem dentro do material</h2>
-      <p>Muito mais do que histórias: um método completo para transformar leitura em ensinamento que fica para a vida toda.</p>
+      <h2>Muito mais que histórias: um método completo</h2>
     </div>
-    <div class="feature-list">
-      <div class="feature reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><b>1000 histórias ilustradas</b><span>Um acervo gigante que dura anos, sem nunca repetir.</span></div></div>
-      <div class="feature reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><b>Organizadas por temas</b><span>Encontre a lição certa para cada momento em segundos.</span></div></div>
-      <div class="feature reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><b>Passagem bíblica</b><span>Ensino fiel à Palavra, com referência sempre à mão.</span></div></div>
-      <div class="feature reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><b>Valor de cada página</b><span>A criança entende qual virtude está aprendendo.</span></div></div>
-      <div class="feature reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><b>Lição simples e direta</b><span>Linguagem que a criança realmente compreende.</span></div></div>
-      <div class="feature reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><b>Oração para a criança</b><span>Um momento de conexão com Deus em cada leitura.</span></div></div>
-      <div class="feature reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><b>Pergunta reflexiva</b><span>Abre conversas valiosas entre pais e filhos.</span></div></div>
-      <div class="feature reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><b>Desafio de fé do dia</b><span>Transforma o aprendizado em atitude prática.</span></div></div>
-      <div class="feature reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><b>PDF pronto para usar</b><span>Acesse no celular, tablet, computador ou imprima.</span></div></div>
+    <div class="inc-card reveal">
+      <ul class="inc-list">
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><b>1000 histórias</b> ilustradas, organizadas por 20 temas</div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><b>Passagem bíblica</b> e lição em cada página</div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><b>Oração e pergunta</b> para conversar em família</div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><b>Desafio de fé</b> que vira atitude prática</div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><b>Linguagem simples</b> que a criança entende</div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><b>PDF</b> para celular, tablet ou impressão</div></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -414,32 +424,29 @@
 <!-- ===== TEMAS ===== -->
 <section class="pad section-off">
   <div class="wrap">
-    <div class="head reveal">
+    <div class="head reveal" style="margin-bottom:28px">
       <span class="eyebrow">Valores que ficam para a vida</span>
-      <h2>Temas bíblicos para ensinar o que realmente importa</h2>
-      <p>Cada tema foi escolhido para formar o caráter da criança à luz da Palavra de Deus.</p>
+      <h2>20 temas bíblicos que formam o caráter</h2>
     </div>
-    <div class="themes-grid">
-      <div class="theme reveal"><span class="dot">📖</span>Antigo Testamento 1</div>
-      <div class="theme reveal"><span class="dot">📖</span>Antigo Testamento 2</div>
-      <div class="theme reveal"><span class="dot">✝️</span>Novo Testamento 1</div>
-      <div class="theme reveal"><span class="dot">✝️</span>Novo Testamento 2</div>
-      <div class="theme reveal"><span class="dot">🤝</span>Honestidade</div>
-      <div class="theme reveal"><span class="dot">🕊️</span>Mansidão</div>
-      <div class="theme reveal"><span class="dot">😊</span>Alegria</div>
-      <div class="theme reveal"><span class="dot">🎁</span>Generosidade</div>
-      <div class="theme reveal"><span class="dot">⏳</span>Paciência</div>
-      <div class="theme reveal"><span class="dot">🌅</span>Esperança</div>
-      <div class="theme reveal"><span class="dot">❤️</span>Amor</div>
-      <div class="theme reveal"><span class="dot">🙇</span>Humildade</div>
-      <div class="theme reveal"><span class="dot">🤲</span>Perdão</div>
-      <div class="theme reveal"><span class="dot">🦉</span>Sabedoria</div>
-      <div class="theme reveal"><span class="dot">🌟</span>Bondade</div>
-      <div class="theme reveal"><span class="dot">🛡️</span>Fidelidade</div>
-      <div class="theme reveal"><span class="dot">🦁</span>Coragem</div>
-      <div class="theme reveal"><span class="dot">🙏</span>Fé</div>
-      <div class="theme reveal"><span class="dot">🌻</span>Gratidão</div>
-      <div class="theme reveal"><span class="dot">📜</span>Obediência</div>
+    <div class="chips reveal">
+      <span>📖 Antigo Testamento</span>
+      <span>✝️ Novo Testamento</span>
+      <span>🤝 Honestidade</span>
+      <span>🕊️ Mansidão</span>
+      <span>😊 Alegria</span>
+      <span>🎁 Generosidade</span>
+      <span>⏳ Paciência</span>
+      <span>🌅 Esperança</span>
+      <span>❤️ Amor</span>
+      <span>🙇 Humildade</span>
+      <span>🤲 Perdão</span>
+      <span>🦉 Sabedoria</span>
+      <span>🌟 Bondade</span>
+      <span>🛡️ Fidelidade</span>
+      <span>🦁 Coragem</span>
+      <span>🙏 Fé</span>
+      <span>🌻 Gratidão</span>
+      <span>📜 Obediência</span>
     </div>
   </div>
 </section>
