@@ -672,6 +672,23 @@
   </div>
 </div>
 
+<!-- ===== POP-UP DE SAÍDA (back redirect / exit-intent) ===== -->
+<div class="modal-ov" id="exitModal">
+  <div class="modal">
+    <button class="x" id="exitClose" aria-label="Fechar">&times;</button>
+    <div class="em">🚨</div>
+    <h3>Espere! Não vá embora ainda...</h3>
+    <p>Preparamos uma última oferta especial só para você:</p>
+    <div class="hl">
+      <div class="small">Pacote Completo por apenas</div>
+      <div class="big">R$3,90</div>
+      <div><s>De R$10</s> &middot; 1000 histórias + todos os 11 bônus</div>
+    </div>
+    <a href="https://ggcheckout.app/checkout/v5/VqyIpSZEX778t9A2Rq31" class="btn btn--pulse" id="exitCta">Quero garantir por R$3,90</a>
+    <button class="skip" id="exitSkip">Não, vou perder essa última chance</button>
+  </div>
+</div>
+
 <script>
   // Pop-up oferta (Pacote Básico encerrado)
   (function(){
@@ -688,6 +705,38 @@
     document.getElementById('offerSkip').addEventListener('click',close);
     ov.addEventListener('click',function(e){if(e.target===ov)close();});
     document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+  })();
+
+  // Pop-up de SAÍDA (exit-intent no desktop + back no celular) — Pacote Completo R$3,90
+  (function(){
+    var ov=document.getElementById('exitModal');
+    if(!ov) return;
+    var shown=false;
+    function open(){
+      if(shown) return;
+      shown=true;
+      ov.classList.add('open');
+      document.body.style.overflow='hidden';
+    }
+    function close(){ ov.classList.remove('open'); document.body.style.overflow=''; }
+    document.getElementById('exitClose').addEventListener('click',close);
+    document.getElementById('exitSkip').addEventListener('click',close);
+    ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+
+    // 1) Exit-intent no desktop: mouse sai pelo topo (em direção a fechar/aba)
+    document.addEventListener('mouseout',function(e){
+      if(!e.toElement && !e.relatedTarget && e.clientY <= 0){ open(); }
+    });
+
+    // 2) Back redirect no celular/navegador: prende o botão "voltar" uma vez
+    history.pushState(null, document.title, location.href);
+    window.addEventListener('popstate', function(){
+      if(!shown){
+        open();
+        history.pushState(null, document.title, location.href); // mantém o usuário na página
+      }
+    });
   })();
 
   // FAQ accordion
