@@ -739,6 +739,22 @@
     });
   })();
 
+  // ===== Disparo de INICIAR CHECKOUT (IC) no clique de compra =====
+  (function(){
+    function trackIC(){
+      try { if (typeof fbq === 'function') fbq('track', 'InitiateCheckout', { currency: 'BRL' }); } catch(e){}
+      try { if (typeof utmify === 'function') utmify('track', 'InitiateCheckout'); } catch(e){}
+      try { if (window.utmifyPixel && typeof window.utmifyPixel.track === 'function') window.utmifyPixel.track('InitiateCheckout'); } catch(e){}
+      try { (window.dataLayer = window.dataLayer || []).push({ event: 'InitiateCheckout', value_offer: 'iniciar_checkout' }); } catch(e){}
+    }
+    // Dispara ao clicar em qualquer link que leve ao checkout (GGCheckout)
+    document.addEventListener('click', function(ev){
+      var a = ev.target && ev.target.closest ? ev.target.closest('a[href*="ggcheckout.app"]') : null;
+      if (a) trackIC();
+    }, true);
+    window.trackInitiateCheckout = trackIC; // disponível para uso manual, se precisar
+  })();
+
   // FAQ accordion
   document.querySelectorAll('.faq-q').forEach(function(q){
     q.addEventListener('click',function(){
